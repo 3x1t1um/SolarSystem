@@ -1,5 +1,4 @@
 from vpython import *
-import threading
 import platform
 import json
 import src.informations as infos
@@ -84,6 +83,8 @@ class SolarSystem(object):
 			# the satellites will arrive later
  
 	def createscene(self):
+		# to be reviewed at the next update
+		
 		self.scene = scene
 		self.scene.autoscale = False
 		self.scene.lights = []
