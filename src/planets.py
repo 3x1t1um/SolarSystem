@@ -1,8 +1,9 @@
 from vpython import *
+import threading
 
 class planets(object):
 	"""docstring for planets"""
-	def new(self, canv, sun_distance, radius, rotation_axis, orbitaltime, texture, trail=True, sun_distance_scale=0.0000002, radius_scale=0.0001):
+	def new(self, canv, sun_distance, radius, texture, trail=True, sun_distance_scale=0.0000002, radius_scale=0.0001):
 		self.canv = canv
 		self.sun_distance = sun_distance
 		self.radius = radius
