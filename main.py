@@ -54,7 +54,7 @@ class SolarSystem(object):
 		self.uranus = planets.planets().new(scene, self.uranus_data["distance"], self.uranus_data["radius"], self.uranus_data["texture"])
 		self.neptune = planets.planets().new(scene, self.neptune_data["distance"], self.neptune_data["radius"], self.neptune_data["texture"])
 
-		self.scene.camera.follow(self.venus)
+		self.scene.camera.follow(self.sun)
 		time.sleep(5)
 		self.rotation()
 
@@ -73,12 +73,12 @@ class SolarSystem(object):
 			
 			self.mercury.rotate(angle = radians(57/self.mercury_data["speed"]/300), axis = vector(0, 1, 0))
 			self.venus.rotate(angle = radians(243/self.venus_data["speed"]/300), axis = vector(0, 1, 0))
-			self.earth.rotate(angle=radians(self.earth_data["speed"]/self.earth_data["speed"]/300), axis=vector(0, 1, 0), origin=self.sun.pos)
-			self.mars.rotate(angle=radians(self.mars_data["speed"]/self.mars_data["speed"]/300), axis=vector(0, 1, 0), origin=self.sun.pos)
-			self.jupiter.rotate(angle=radians(self.jupiter_data["speed"]/self.jupiter_data["speed"]/300), axis=vector(0, 1, 0), origin=self.sun.pos)
-			self.saturn.rotate(angle=radians(self.saturn_data["speed"]/self.saturn_data["speed"]/300), axis=vector(0, 1, 0), origin=self.sun.pos)
-			self.uranus.rotate(angle=radians(self.uranus_data["speed"]/self.uranus_data["speed"]/300), axis=vector(0, 1, 0), origin=self.sun.pos)
-			self.neptune.rotate(angle=radians(self.neptune_data["speed"]/self.neptune_data["speed"]/300), axis=vector(0, 1, 0), origin=self.sun.pos)
+			self.earth.rotate(angle=radians(self.earth_data["speed"]/self.earth_data["speed"]/300), axis=vector(0, 1, 0))
+			self.mars.rotate(angle=radians(self.mars_data["speed"]/self.mars_data["speed"]/300), axis=vector(0, 1, 0))
+			self.jupiter.rotate(angle=radians(self.jupiter_data["speed"]/self.jupiter_data["speed"]/300), axis=vector(0, 1, 0))
+			self.saturn.rotate(angle=radians(self.saturn_data["speed"]/self.saturn_data["speed"]/300), axis=vector(0, 1, 0))
+			self.uranus.rotate(angle=radians(self.uranus_data["speed"]/self.uranus_data["speed"]/300), axis=vector(0, 1, 0))
+			self.neptune.rotate(angle=radians(self.neptune_data["speed"]/self.neptune_data["speed"]/300), axis=vector(0, 1, 0))
 
 			# the satellites will arrive later
  
